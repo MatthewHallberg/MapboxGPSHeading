@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 114020511733235004}
   - component: {fileID: 114979273059922282}
   - component: {fileID: 114783434110793938}
+  - component: {fileID: 114679059412603648}
   m_Layer: 9
   m_Name: ArAlignedMap
   m_TagString: Untagged
@@ -130,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1311763986613244
 GameObject:
   m_ObjectHideFlags: 1
@@ -987,7 +988,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1761966447711200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbcd5647f1aee491f8e9d70d52f4ab40, type: 3}
   m_Name: 
@@ -1154,7 +1155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _desiredAccuracyInMeters: 1
-  _updateDistanceInMeters: 3
+  _updateDistanceInMeters: 1
 --- !u!114 &114192494322039908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1288,7 +1289,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1051889726971786}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbcd5647f1aee491f8e9d70d52f4ab40, type: 3}
   m_Name: 
@@ -1691,6 +1692,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: AR
+--- !u!114 &114679059412603648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080084638664404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252d965579e3d4003a41c4f351a6694d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114694478196402474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2056,7 +2068,7 @@ MonoBehaviour:
   _transform: {fileID: 4518919239272552}
   _maxSamples: 10
   _ignoreAngleThreshold: 10
-  _lerpSpeed: 0.5
+  _lerpSpeed: 2
 --- !u!114 &114990881702065268
 MonoBehaviour:
   m_ObjectHideFlags: 1

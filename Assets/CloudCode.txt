@@ -1,0 +1,32 @@
+
+CLOUD CODE FOR INSERTING ENTRY: 
+
+    var geoMessageList = Spark.runtimeCollection("GeoMessage"); 
+    var messageLat = Spark.getData().LAT;
+    var messageLon = Spark.getData().LON; 
+    var messageText = Spark.getData().TEXT; 
+    var currentMessage = {
+        "messLat": messageLat,
+        "messLon": messageLon,
+        "messText": messageText,
+    };
+    geoMessageList.insert(currentMessage);
+
+CLOUD CODE FOR DROPPING: 
+
+var messageData = Spark.runtimeCollection("GeoMessage");
+messageData.remove({});
+
+CLOUD CODE FOR READING ALL MESSAGES: 
+
+var messageData = Spark.runtimeCollection("GeoMessage");
+var cursor = messageData.find();
+var allMessages = [];
+
+while(cursor.hasNext()) {
+    var obj = cursor.next();
+    delete(obj ["_id"]);
+    allMessages.push(obj);
+}
+
+Spark.setScriptData("all_Messages", allMessages); // return all data
